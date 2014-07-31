@@ -1,0 +1,43 @@
+<div class="page-header">
+  <%= link_to new_mmm_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Mmm
+  <% end %>
+  <h1>Listing mmms</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Mdu</th>
+            <th>Tkd</th>
+            <th>Adress</th>
+            <th>Porch</th>
+            <th>Ip</th>
+            <th>Sys name</th>
+            <th>Ingress</th>
+            <th>Mod</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @mmms) do |mmm| %>
+            <td><%= mmm.mdu %></td>
+            <td><%= mmm.tkd %></td>
+            <td><%= mmm.adress %></td>
+            <td><%= mmm.porch %></td>
+            <td><%= mmm.ip %></td>
+            <td><%= mmm.sys_name %></td>
+            <td><%= mmm.ingress %></td>
+            <td><%= mmm.mod %></td>
+            <td><%= link_to 'Show', mmm %></td>
+        <td><%= link_to 'Edit', edit_mmm_path(mmm) %></td>
+        <td><%= link_to 'Destroy', mmm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

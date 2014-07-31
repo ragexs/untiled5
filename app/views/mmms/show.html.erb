@@ -1,0 +1,38 @@
+<div class="page-header">
+  <%= link_to mmms_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_mmm_path(@mmm), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show mmm</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Mdu:</dt>
+  <dd><%= @mmm.mdu %></dd>
+
+  <dt>Tkd:</dt>
+  <dd><%= @mmm.tkd %></dd>
+
+  <dt>Adress:</dt>
+  <dd><%= @mmm.adress %></dd>
+
+  <dt>Porch:</dt>
+  <dd><%= @mmm.porch %></dd>
+
+  <dt>Ip:</dt>
+  <dd><%= @mmm.ip %></dd>
+
+  <dt>Sys name:</dt>
+  <dd><%= @mmm.sys_name %></dd>
+
+  <dt>Ingress:</dt>
+  <dd><%= @mmm.ingress %></dd>
+
+  <dt>Mod:</dt>
+  <dd><%= @mmm.mod %></dd>
+
+</dl>

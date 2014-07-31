@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mmm_id: 1
+  type_avr: MyString
+  material: MyString
+  user_id: MyString
+  date_on: 2014-07-30 17:13:58
+  date_off: 2014-07-30 17:13:58
+
+two:
+  mmm_id: 1
+  type_avr: MyString
+  material: MyString
+  user_id: MyString
+  date_on: 2014-07-30 17:13:58
+  date_off: 2014-07-30 17:13:58

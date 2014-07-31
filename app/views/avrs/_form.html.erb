@@ -1,0 +1,56 @@
+<%= form_for(@avr, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @avr.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@avr.errors.count, "error") %> prohibited this avr from being saved:</h4>
+
+      <ul>
+      <% @avr.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :mmm_id, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :mmm_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :type_avr, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :type_avr, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :material, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :material, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_id, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :user_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :date_on, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.datetime_select :date_on, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :date_off, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.datetime_select :date_off, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

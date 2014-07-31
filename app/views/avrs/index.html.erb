@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to new_avr_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Avr
+  <% end %>
+  <h1>Listing avrs</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Mmm</th>
+            <th>Type avr</th>
+            <th>Material</th>
+            <th>User</th>
+            <th>Date on</th>
+            <th>Date off</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @avrs) do |avr| %>
+            <td><%= avr.mmm_id %></td>
+            <td><%= avr.type_avr %></td>
+            <td><%= avr.material %></td>
+            <td><%= avr.user_id %></td>
+            <td><%= avr.date_on %></td>
+            <td><%= avr.date_off %></td>
+            <td><%= link_to 'Show', avr %></td>
+        <td><%= link_to 'Edit', edit_avr_path(avr) %></td>
+        <td><%= link_to 'Destroy', avr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
