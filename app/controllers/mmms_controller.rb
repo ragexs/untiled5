@@ -4,7 +4,11 @@ class MmmsController < ApplicationController
   # GET /mmms
   # GET /mmms.json
   def index
-    @mmms = Mmm.all
+    @mmms = Mmm.order(:mdu)
+    respond_to do |format|
+      format.html
+      format.json {render json: @mmms.where('mdu like ?', '%#{params[:q]}%')}
+    end
   end
 
   # GET /mmms/1

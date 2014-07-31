@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-generators', '~> 3.1.1'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
-
+gem 'chosen-rails'
+gem 'thin'
 # Use unicorn as the app server
 # gem 'unicorn'
 
