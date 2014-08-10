@@ -29,7 +29,9 @@ gem 'chosen-rails'
 gem 'thin'
 # Use unicorn as the app server
 # gem 'unicorn'
-
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+ gem 'jquery-ui-rails', '~> 4.2.1'
+  gem 'will_paginate'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
